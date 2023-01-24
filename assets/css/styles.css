@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("../../node_modules/bootstrap-icons/font/bootstrap-icons.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,8 +75,8 @@ html, body {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: hsl(243deg, 87%, 12%);
-  --bs-link-hover-color: #06032e;
+  --bs-link-color: #389583;
+  --bs-link-hover-color: #2d7769;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -115,7 +116,7 @@ hr {
 
 h6, h5, h4, h3, h2, h1 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -166,7 +167,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 abbr[title] {
@@ -7049,9 +7050,6 @@ header {
 }
 
 .features {
-  background-image: url(/assets/images/bg-curve-desktop.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
   padding: 0px 80px 160px 80px;
 }
 .features .row {
@@ -7063,18 +7061,23 @@ header {
   line-height: 60px;
 }
 .features p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 25px;
+  width: 95%;
 }
 .features img {
   max-width: 100%;
   height: 100%;
 }
 .features button {
-  padding: 14px 70px;
-  font-size: 16px;
+  padding: 12px 70px;
+  font-size: 14px;
   color: white;
   background-color: hsl(224deg, 93%, 58%);
+}
+.features input {
+  width: 50%;
 }
 .features input::placeholder {
   color: hsl(0deg, 0%, 75%);
@@ -7085,6 +7088,90 @@ header {
   background-color: hsl(240deg, 75%, 98%);
   background-position: 0 -20px;
   padding: 80px;
+  position: relative;
+}
+.team h1 {
+  font-family: "Raleway";
+  font-weight: 700;
+  line-height: 60px;
+}
+.team .content-wrapper {
+  width: 75%;
+}
+.team .content-wrapper p {
+  font-weight: 500;
+}
+.team .content-wrapper a {
+  text-decoration: none;
+  border-bottom: 1px solid #418f81;
+  padding-bottom: 4px;
+}
+.team .card {
+  width: 50%;
+  padding: 20px 35px;
+}
+.team .card p {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 500;
+}
+.team .profile-wrapper .profile {
+  height: 35px;
+  width: 35px;
+}
+.team .profile-wrapper p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.team .profile-wrapper p + p {
+  font-size: 10px;
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-top: -8px;
+}
+.team img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.team::before {
+  content: "";
+  background-image: url(/assets/images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -110px;
+  left: 0px;
+}
+
+.signin {
+  background-color: hsl(238deg, 22%, 44%);
+  background-position: 0 -20px;
+  padding: 100px 100px 100px 80px;
+}
+.signin h3 {
+  font-size: 2rem;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.signin p {
+  width: 76%;
+  font-size: 18px;
+}
+.signin input {
+  padding: 12px 24px;
+}
+.signin input::placeholder {
+  color: hsl(0deg, 0%, 75%);
+  font-size: 14px;
+}
+.signin button {
+  padding: 12px 36px;
+  font-size: 14px;
+  color: white;
+  background-color: hsl(224deg, 93%, 58%);
 }
 
 /*# sourceMappingURL=styles.css.map */
