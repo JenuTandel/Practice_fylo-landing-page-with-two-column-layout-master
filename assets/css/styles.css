@@ -7041,8 +7041,16 @@ figure {
   margin: 0;
 }
 
-header {
-  padding: 80px;
+nav {
+  padding: 80px 80px 20px 80px;
+}
+
+.container-xl {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .nav-link {
@@ -7050,7 +7058,7 @@ header {
 }
 
 .features {
-  padding: 0px 80px 160px 80px;
+  padding: 80px 80px 160px 80px;
 }
 .features .row {
   margin-bottom: 110px;
@@ -7073,11 +7081,10 @@ header {
 .features button {
   padding: 12px 70px;
   font-size: 14px;
-  color: white;
   background-color: hsl(224deg, 93%, 58%);
 }
 .features input {
-  width: 50%;
+  width: 300px;
 }
 .features input::placeholder {
   color: hsl(0deg, 0%, 75%);
@@ -7087,8 +7094,7 @@ header {
 .team {
   background-color: hsl(240deg, 75%, 98%);
   background-position: 0 -20px;
-  padding: 80px;
-  position: relative;
+  padding: 80px 0px;
 }
 .team h1 {
   font-family: "Raleway";
@@ -7107,7 +7113,7 @@ header {
   padding-bottom: 4px;
 }
 .team .card {
-  width: 50%;
+  width: 360px;
   padding: 20px 35px;
 }
 .team .card p {
@@ -7139,8 +7145,9 @@ header {
   content: "";
   background-image: url(/assets/images/bg-curve-desktop.svg);
   background-repeat: no-repeat;
-  height: 100%;
+  height: 110px;
   width: 100%;
+  background-size: cover;
   position: absolute;
   top: -110px;
   left: 0px;
@@ -7149,7 +7156,7 @@ header {
 .signin {
   background-color: hsl(238deg, 22%, 44%);
   background-position: 0 -20px;
-  padding: 100px 100px 100px 80px;
+  padding: 100px 0px;
 }
 .signin h3 {
   font-size: 2rem;
@@ -7157,7 +7164,7 @@ header {
   font-weight: 600;
 }
 .signin p {
-  width: 76%;
+  width: 560px;
   font-size: 18px;
 }
 .signin input {
@@ -7170,8 +7177,23 @@ header {
 .signin button {
   padding: 12px 36px;
   font-size: 14px;
-  color: white;
   background-color: hsl(224deg, 93%, 58%);
+}
+
+.contact-us {
+  padding: 80px;
+}
+
+.icon-wrapper {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-left: 16px;
+}
+.icon-wrapper .icon {
+  color: white;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=styles.css.map */
