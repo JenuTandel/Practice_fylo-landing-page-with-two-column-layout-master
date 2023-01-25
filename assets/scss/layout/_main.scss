@@ -27,11 +27,20 @@
     button {
         padding: 12px 70px;
         font-size: 14px;
+        margin-left: 12px;
         background-color: hsl(224, 93%, 58%);
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            margin-left: 0;
+            margin-top: 16px;
+        }
     }
 
-    input{
-        width: 300px;
+    @include media-breakpoint-down(lg){
+        input{
+            padding: 12px;
+        }
     }
 
     input::placeholder {
@@ -53,6 +62,10 @@
     }
     .content-wrapper{
         width: 75%;
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
         p {
             font-weight: 500;
         }
@@ -65,6 +78,11 @@
     .card{
         width:360px;
         padding: 20px 35px;
+
+        @include media-breakpoint-down(lg){
+            margin: auto;
+        }
+
         p{
             font-size: 14px;
             line-height: 25px;
@@ -118,8 +136,8 @@
         font-weight: 600;
     }
     p{
-        width: 560px;
         font-size: 18px;
+        margin-left: 10px;
     }
 
     input{

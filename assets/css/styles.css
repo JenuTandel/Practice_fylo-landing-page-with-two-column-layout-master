@@ -7081,10 +7081,20 @@ nav {
 .features button {
   padding: 12px 70px;
   font-size: 14px;
+  margin-left: 12px;
   background-color: hsl(224deg, 93%, 58%);
 }
-.features input {
-  width: 300px;
+@media (max-width: 991.98px) {
+  .features button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 991.98px) {
+  .features input {
+    padding: 12px;
+  }
 }
 .features input::placeholder {
   color: hsl(0deg, 0%, 75%);
@@ -7104,6 +7114,11 @@ nav {
 .team .content-wrapper {
   width: 75%;
 }
+@media (max-width: 991.98px) {
+  .team .content-wrapper {
+    width: 100%;
+  }
+}
 .team .content-wrapper p {
   font-weight: 500;
 }
@@ -7115,6 +7130,11 @@ nav {
 .team .card {
   width: 360px;
   padding: 20px 35px;
+}
+@media (max-width: 991.98px) {
+  .team .card {
+    margin: auto;
+  }
 }
 .team .card p {
   font-size: 14px;
@@ -7164,8 +7184,8 @@ nav {
   font-weight: 600;
 }
 .signin p {
-  width: 560px;
   font-size: 18px;
+  margin-left: 10px;
 }
 .signin input {
   padding: 12px 24px;
