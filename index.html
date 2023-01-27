@@ -9,13 +9,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
     <script
       src="https://kit.fontawesome.com/8a46a6443f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -39,20 +39,22 @@
         >
           <figure class="brand-logo">
             <a href="">
-              <img src="assets/images/logo.svg" />
+              <img src="./assets/images/logo.svg" alt="brand-logo" />
             </a>
           </figure>
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign In</a>
-            </li>
-          </ul>
+          <div class="nav justify-content-end">
+            <ul class="nav justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign In</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <!-- end: header -->
@@ -61,21 +63,25 @@
         <!-- start: feature section -->
         <section class="features container-xl text-primary">
           <div class="row align-items-center">
-            <div class="col-6">
-              <h1 class="mb-3">
+            <div class="col-12 col-lg-6 order-lg-0 order-1">
+              <h1 class="mb-3 text-lg-start text-center">
                 All your files in one secure location, accessible anywhere.
               </h1>
-              <p class="mb-4">
+              <p class="mb-4 text-lg-start text-center">
                 Fylo stores your most important files in one secure location.
                 Access them wherever you need, share and collaborate with
                 friends, family, and co-workers.
               </p>
-              <div class="d-flex">
-                <input type="email" placeholder="Enter your email..." />
+              <div class="d-md-flex d-block">
+                <input
+                  type="email"
+                  placeholder="Enter your email..."
+                  class="form-control border-dark"
+                />
                 <div>
                   <button
                     type="button"
-                    class="btn ms-3 text-white"
+                    class="btn text-white"
                     value="Get Started"
                   >
                     Get Started
@@ -83,8 +89,8 @@
                 </div>
               </div>
             </div>
-            <figure class="col-6 image-wrapper">
-              <img src="assets/images/illustration-1.svg" />
+            <figure class="image-wrapper col-12 col-lg-6 order-0 order-lg-1">
+              <img src="./assets/images/illustration-1.svg" alt="hero image"/>
             </figure>
           </div>
         </section>
@@ -92,10 +98,12 @@
 
         <!-- start: team section -->
         <section class="team text-primary position-relative">
-          <div class="row container-xl align-items-center mb-4">
-            <div class="col-7">
-              <h1 class="mb-4">Stay productive, wherever you are</h1>
-              <div class="content-wrapper">
+          <div class="row container-xl align-items-center mb-lg-4 mb-0">
+            <div class="col-lg-7 col-12 order-lg-0 order-1 p-0">
+              <h1 class="mb-4 text-center text-lg-start">
+                Stay productive, wherever you are
+              </h1>
+              <div class="content-wrapper text-lg-start">
                 <p class="mb-3">
                   Never let location be an issue when accessing your files. Fylo
                   has you covered for all of your file storage needs.
@@ -105,6 +113,7 @@
                   colleagues for live collaboration. No email attachments
                   required!
                 </p>
+                <div class="text-center text-lg-start">
                 <a href=""
                   >See how Fylo works
                   <svg
@@ -151,6 +160,7 @@
                   </svg>
                 </a>
               </div>
+              </div>
               <div class="card mt-5 bg-white rounded">
                 <div class="card-body">
                   <svg
@@ -176,7 +186,7 @@
                   <div class="profile-wrapper d-flex align-items-center">
                     <div class="profile rounded-circle overflow-hidden">
                       <img
-                        src="assets/images/avatar-testimonial.jpg"
+                        src="./assets/images/avatar-testimonial.jpg" alt="profile"
                         height="100%"
                         width="100%"
                       />
@@ -190,24 +200,24 @@
               </div>
               <div></div>
             </div>
-            <figure class="col-5 image-wrapper">
-              <img src="assets/images/illustration-2.svg" />
+            <figure class="image-wrapper col-lg-5 col-12 order-0 order-lg-1">
+              <img src="./assets/images/illustration-2.svg" alt="team" />
             </figure>
           </div>
         </section>
         <!-- end: team section -->
         <!-- start: signin section -->
         <section class="signin">
-          <div class="row container-xl align-items-center">
-            <div class="col-7">
-              <h3 class="text-white mb-3">Get early access today</h3>
-              <p class="me-5 text-white">
+          <div class="row container-xl align-items-center justify-content-center justify-content-lg-start">
+            <div class="col-lg-7 col-12">
+              <h3 class="text-white mb-3 text-lg-start text-center">Get early access today</h3>
+              <p class="text-white text-lg-start text-center">
                 It only takes a minute to sign up and our free starter tier is
                 extremely generous. If you have any questions, our support team
                 would be happy to help you.
               </p>
             </div>
-            <div class="col-5">
+            <div class="col-lg-5 col-12 px-4">
               <div class="d-flex flex-column justify-content-center">
                 <input
                   type="email"
@@ -227,8 +237,8 @@
         <!-- end: main content -->
       </main>
       <!-- start: footer -->
-      <footer class="bg-primary w-100">
-        <div class="contact-us container-xl">
+      <footer class="contact-us bg-primary w-100">
+        <div class="row container-xl">
           <div class="mb-4">
             <svg
               width="166"
@@ -254,7 +264,7 @@
             </svg>
           </div>
           <div class="row">
-            <div class="col-3 d-flex flex-column">
+            <div class="col-lg-3 col-12 d-flex flex-column mb-5 mb-lg-0">
               <div class="d-flex mb-3 align-items-center">
                 <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -276,7 +286,9 @@
                 <span class="text-white ms-3">example@fylo.com</span>
               </div>
             </div>
-            <div class="col-3 d-flex justify-content-center">
+            <div
+              class="col-lg-3 col-12 d-flex justify-content-lg-center justify-content-start mb-5 mb-lg-0"
+            >
               <ul class="nav flex-column ps-0">
                 <li class="nav-item mb-3">
                   <a class="nav-link text-white" href="#">About Us</a>
@@ -292,7 +304,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-3 d-flex justify-content-center">
+            <div class="col-lg-3 col-12 d-flex justify-content-lg-center justify-content-start mb-5 mb-lg-0">
               <ul class="nav flex-column">
                 <li class="nav-item mb-3">
                   <a class="nav-link text-white" href="#">Contact Us</a>
@@ -305,7 +317,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-3 d-flex justify-content-center">
+            <div class="col-lg-3 col-12 d-flex justify-content-center justify-content-start">
               <span
                 class="icon-wrapper rounded-circle d-flex align-items-center justify-content-center"
               >

@@ -69,7 +69,7 @@ html, body {
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-  --bs-border-radius: 0.375rem;
+  --bs-border-radius: 4px;
   --bs-border-radius-sm: 0.25rem;
   --bs-border-radius-lg: 0.5rem;
   --bs-border-radius-xl: 1rem;
@@ -5769,9 +5769,9 @@ progress {
   }
 }
 .nav {
-  --bs-nav-link-padding-x: 60px;
+  --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0;
-  --bs-nav-link-font-size: 1.125rem;
+  --bs-nav-link-font-size: 1rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: black;
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -5809,7 +5809,7 @@ progress {
 .nav-tabs {
   --bs-nav-tabs-border-width: 1px;
   --bs-nav-tabs-border-color: #dee2e6;
-  --bs-nav-tabs-border-radius: 0.375rem;
+  --bs-nav-tabs-border-radius: 4px;
   --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
   --bs-nav-tabs-link-active-color: #495057;
   --bs-nav-tabs-link-active-bg: #fff;
@@ -5845,7 +5845,7 @@ progress {
 }
 
 .nav-pills {
-  --bs-nav-pills-border-radius: 0.375rem;
+  --bs-nav-pills-border-radius: 4px;
   --bs-nav-pills-link-active-color: #fff;
   --bs-nav-pills-link-active-bg: hsl(243deg, 87%, 12%);
 }
@@ -5932,7 +5932,7 @@ progress {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   appearance: none;
-  border-radius: 0.375rem;
+  border-radius: 4px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -6050,10 +6050,10 @@ textarea.form-control-lg {
 }
 .form-control-color::-moz-color-swatch {
   border: 0 !important;
-  border-radius: 0.375rem;
+  border-radius: 4px;
 }
 .form-control-color::-webkit-color-swatch {
-  border-radius: 0.375rem;
+  border-radius: 4px;
 }
 .form-control-color.form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
@@ -6077,7 +6077,7 @@ textarea.form-control-lg {
   background-position: right 0.75rem center;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
-  border-radius: 0.375rem;
+  border-radius: 4px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
@@ -6430,7 +6430,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
-  border-radius: 0.375rem;
+  border-radius: 4px;
 }
 
 .input-group-lg > .form-control,
@@ -6497,7 +6497,7 @@ textarea.form-control-lg {
   font-size: 0.875rem;
   color: #fff;
   background-color: rgba(25, 135, 84, 0.9);
-  border-radius: 0.375rem;
+  border-radius: 4px;
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -6590,7 +6590,7 @@ textarea.form-control-lg {
   font-size: 0.875rem;
   color: #fff;
   background-color: rgba(220, 53, 69, 0.9);
-  border-radius: 0.375rem;
+  border-radius: 4px;
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -6675,7 +6675,7 @@ textarea.form-control-lg {
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
+  --bs-btn-border-radius: 4px;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
   --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
@@ -7041,10 +7041,6 @@ figure {
   margin: 0;
 }
 
-nav {
-  padding: 80px 80px 20px 80px;
-}
-
 .container-xl {
   max-width: 1440px;
   margin-left: auto;
@@ -7052,21 +7048,65 @@ nav {
   padding-left: 80px;
   padding-right: 80px;
 }
+@media (max-width: 576px) {
+  .container-xl {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 
-.nav-link {
+header nav {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+@media (max-width: 576px) {
+  header nav {
+    padding-top: 30px;
+  }
+}
+header .nav-link {
   padding-right: 0;
+  margin-left: 50px;
+}
+@media (max-width: 576px) {
+  header .nav-link {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  header .brand-logo img {
+    height: 30px;
+  }
 }
 
 .features {
-  padding: 80px 80px 160px 80px;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+@media (max-width: 576px) {
+  .features {
+    padding-bottom: 80px;
+  }
 }
 .features .row {
   margin-bottom: 110px;
+}
+@media (max-width: 991.98px) {
+  .features .row {
+    margin-bottom: 60px;
+  }
 }
 .features h1 {
   font-family: "Raleway";
   font-weight: 700;
   line-height: 60px;
+}
+@media (max-width: 576px) {
+  .features h1 {
+    line-height: 40px;
+    font-size: 25px;
+  }
 }
 .features p {
   font-size: 18px;
@@ -7074,21 +7114,53 @@ nav {
   line-height: 25px;
   width: 95%;
 }
+@media (max-width: 576px) {
+  .features p {
+    font-size: 14px;
+  }
+}
 .features img {
   max-width: 100%;
   height: 100%;
 }
+@media (max-width: 991.98px) {
+  .features img {
+    margin-bottom: 50px;
+  }
+}
 .features button {
   padding: 12px 70px;
   font-size: 14px;
+  margin-left: 12px;
+  white-space: nowrap;
   background-color: hsl(224deg, 93%, 58%);
 }
-.features input {
-  width: 300px;
+@media (max-width: 768px) {
+  .features button {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .features button {
+    margin-top: 12px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .features input {
+    padding: 10px;
+  }
 }
 .features input::placeholder {
   color: hsl(0deg, 0%, 75%);
   padding-left: 20px;
+}
+@media (max-width: 576px) {
+  .features input::placeholder {
+    font-size: 14px;
+  }
 }
 
 .team {
@@ -7096,39 +7168,95 @@ nav {
   background-position: 0 -20px;
   padding: 80px 0px;
 }
+@media (max-width: 576px) {
+  .team {
+    padding-top: 60px;
+  }
+}
 .team h1 {
   font-family: "Raleway";
   font-weight: 700;
   line-height: 60px;
 }
+@media (max-width: 576px) {
+  .team h1 {
+    line-height: 0px;
+    font-size: 16px;
+  }
+}
 .team .content-wrapper {
   width: 75%;
 }
+@media (max-width: 991.98px) {
+  .team .content-wrapper {
+    width: 100%;
+  }
+}
 .team .content-wrapper p {
   font-weight: 500;
+}
+@media (max-width: 576px) {
+  .team .content-wrapper p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 .team .content-wrapper a {
   text-decoration: none;
   border-bottom: 1px solid #418f81;
   padding-bottom: 4px;
 }
+@media (max-width: 576px) {
+  .team .content-wrapper a {
+    font-size: small;
+  }
+}
 .team .card {
   width: 360px;
   padding: 20px 35px;
+}
+@media (max-width: 991.98px) {
+  .team .card {
+    margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .team .card {
+    width: 300px;
+    padding: 14px 24px;
+  }
 }
 .team .card p {
   font-size: 14px;
   line-height: 25px;
   font-weight: 500;
 }
+@media (max-width: 576px) {
+  .team .card p {
+    font-size: 11px;
+    line-height: 20px;
+  }
+}
 .team .profile-wrapper .profile {
   height: 35px;
   width: 35px;
+}
+@media (max-width: 576px) {
+  .team .profile-wrapper .profile {
+    height: 25px;
+    width: 25px;
+  }
 }
 .team .profile-wrapper p {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
+}
+@media (max-width: 576px) {
+  .team .profile-wrapper p {
+    font-size: 10px;
+    letter-spacing: 0px;
+  }
 }
 .team .profile-wrapper p + p {
   font-size: 10px;
@@ -7136,9 +7264,26 @@ nav {
   font-weight: 500;
   margin-top: -8px;
 }
+@media (max-width: 576px) {
+  .team .profile-wrapper p + p {
+    font-size: 8px;
+  }
+}
 .team img {
   max-width: 100%;
   height: 100%;
+}
+@media (max-width: 991.98px) {
+  .team img {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 991.98px) {
+  .team button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 16px;
+  }
 }
 
 .team::before {
@@ -7152,48 +7297,130 @@ nav {
   top: -110px;
   left: 0px;
 }
+@media (max-width: 1199.98px) {
+  .team::before {
+    background-image: url(/assets/images/bg-curve-mobile.svg);
+    background-size: 100%;
+    top: -108px;
+  }
+}
+@media (max-width: 767.98px) {
+  .team::before {
+    background-image: url(/assets/images/bg-curve-mobile.svg);
+    background-size: 100%;
+    top: -85px;
+  }
+}
+@media (max-width: 576px) {
+  .team::before {
+    background-image: url(/assets/images/bg-curve-mobile.svg);
+    background-size: 100%;
+    top: -50px;
+  }
+}
 
 .signin {
   background-color: hsl(238deg, 22%, 44%);
   background-position: 0 -20px;
   padding: 100px 0px;
 }
+@media (max-width: 576px) {
+  .signin {
+    padding: 60px 0px;
+  }
+}
 .signin h3 {
   font-size: 2rem;
   font-family: "Raleway";
   font-weight: 600;
 }
+@media (max-width: 576px) {
+  .signin h3 {
+    font-size: 1.25rem;
+  }
+}
 .signin p {
-  width: 560px;
   font-size: 18px;
+  font-weight: 300;
+  margin-right: 170px;
+}
+@media (max-width: 991.98px) {
+  .signin p {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .signin p {
+    font-size: 15px;
+    font-weight: 300;
+  }
 }
 .signin input {
   padding: 12px 24px;
 }
+@media (max-width: 576px) {
+  .signin input {
+    padding: 6px 12px;
+  }
+}
 .signin input::placeholder {
   color: hsl(0deg, 0%, 75%);
   font-size: 14px;
+}
+@media (max-width: 576px) {
+  .signin input::placeholder {
+    font-size: 10px;
+  }
 }
 .signin button {
   padding: 12px 36px;
   font-size: 14px;
   background-color: hsl(224deg, 93%, 58%);
 }
-
-.contact-us {
-  padding: 80px;
+@media (max-width: 576px) {
+  .signin button {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 24px;
+  }
 }
 
-.icon-wrapper {
+.contact-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 576px) {
+  .contact-us {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.contact-us .icon-wrapper {
   height: 35px;
   width: 35px;
   border-radius: 50%;
   border: 1px solid white;
   margin-left: 16px;
 }
-.icon-wrapper .icon {
+@media (max-width: 576px) {
+  .contact-us .icon-wrapper {
+    height: 30px;
+    width: 30px;
+  }
+}
+.contact-us .icon-wrapper .icon {
   color: white;
   font-size: 17px;
+}
+@media (max-width: 576px) {
+  .contact-us .icon-wrapper .icon {
+    font-size: 12px;
+  }
+}
+.contact-us .icon-wrapper:first-child {
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
