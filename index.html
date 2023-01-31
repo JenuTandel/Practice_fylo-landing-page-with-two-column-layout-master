@@ -73,16 +73,23 @@
                 friends, family, and co-workers.
               </p>
               <div class="d-md-flex d-block">
-                <input
-                  type="email"
-                  placeholder="Enter your email..."
-                  class="form-control border-dark"
-                />
+                <div class="d-flex flex-column w-100">
+                  <input
+                    type="email"
+                    placeholder="Enter your email..."
+                    class="form-control border-dark"
+                    id="emailID"
+                  />
+                  <div class="text-danger d-none" id="emailerrmsg">
+                    Please check your email
+                  </div>
+                </div>
                 <div>
                   <button
                     type="button"
-                    class="btn text-white"
+                    class="rounded text-white border-0"
                     value="Get Started"
+                    onclick="checkEmail()"
                   >
                     Get Started
                   </button>
@@ -90,7 +97,7 @@
               </div>
             </div>
             <figure class="image-wrapper col-12 col-lg-6 order-0 order-lg-1">
-              <img src="./assets/images/illustration-1.svg" alt="hero image"/>
+              <img src="./assets/images/illustration-1.svg" alt="hero image" />
             </figure>
           </div>
         </section>
@@ -114,52 +121,52 @@
                   required!
                 </p>
                 <div class="text-center text-lg-start">
-                <a href=""
-                  >See how Fylo works
-                  <svg
-                    width="16"
-                    height="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs>
-                      <circle id="b" cx="6" cy="6" r="6" />
-                      <filter
-                        x="-25%"
-                        y="-25%"
-                        width="150%"
-                        height="150%"
-                        filterUnits="objectBoundingBox"
-                        id="a"
-                      >
-                        <feOffset
-                          in="SourceAlpha"
-                          result="shadowOffsetOuter1"
+                  <a href=""
+                    >See how Fylo works
+                    <svg
+                      width="16"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <circle id="b" cx="6" cy="6" r="6" />
+                        <filter
+                          x="-25%"
+                          y="-25%"
+                          width="150%"
+                          height="150%"
+                          filterUnits="objectBoundingBox"
+                          id="a"
+                        >
+                          <feOffset
+                            in="SourceAlpha"
+                            result="shadowOffsetOuter1"
+                          />
+                          <feGaussianBlur
+                            stdDeviation="1"
+                            in="shadowOffsetOuter1"
+                            result="shadowBlurOuter1"
+                          />
+                          <feColorMatrix
+                            values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0"
+                            in="shadowBlurOuter1"
+                          />
+                        </filter>
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(2 2)">
+                          <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                          <use fill="#3DA08F" xlink:href="#b" />
+                        </g>
+                        <path
+                          d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                          fill="#FFF"
                         />
-                        <feGaussianBlur
-                          stdDeviation="1"
-                          in="shadowOffsetOuter1"
-                          result="shadowBlurOuter1"
-                        />
-                        <feColorMatrix
-                          values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0"
-                          in="shadowBlurOuter1"
-                        />
-                      </filter>
-                    </defs>
-                    <g fill="none" fill-rule="evenodd">
-                      <g transform="translate(2 2)">
-                        <use fill="#000" filter="url(#a)" xlink:href="#b" />
-                        <use fill="#3DA08F" xlink:href="#b" />
                       </g>
-                      <path
-                        d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
-                        fill="#FFF"
-                      />
-                    </g>
-                  </svg>
-                </a>
-              </div>
+                    </svg>
+                  </a>
+                </div>
               </div>
               <div class="card mt-5 bg-white rounded">
                 <div class="card-body">
@@ -186,7 +193,8 @@
                   <div class="profile-wrapper d-flex align-items-center">
                     <div class="profile rounded-circle overflow-hidden">
                       <img
-                        src="./assets/images/avatar-testimonial.jpg" alt="profile"
+                        src="./assets/images/avatar-testimonial.jpg"
+                        alt="profile"
                         height="100%"
                         width="100%"
                       />
@@ -208,9 +216,13 @@
         <!-- end: team section -->
         <!-- start: signin section -->
         <section class="signin">
-          <div class="row container-xl align-items-center justify-content-center justify-content-lg-start">
+          <div
+            class="row container-xl align-items-center justify-content-center justify-content-lg-start"
+          >
             <div class="col-lg-7 col-12">
-              <h3 class="text-white mb-3 text-lg-start text-center">Get early access today</h3>
+              <h3 class="text-white mb-3 text-lg-start text-center">
+                Get early access today
+              </h3>
               <p class="text-white text-lg-start text-center">
                 It only takes a minute to sign up and our free starter tier is
                 extremely generous. If you have any questions, our support team
@@ -223,9 +235,13 @@
                   type="email"
                   class="form-control"
                   placeholder="example@fylo.com"
+                  id="emailsignin"
                 />
+                <div class="text-white d-none" id="emailerr">
+                  Please check your email
+                </div>
                 <div>
-                  <button type="button" class="btn mt-3 text-white">
+                  <button type="button" onclick="checkEmailSignin()" class="rounded mt-3 text-white border-0">
                     Get Started For Free
                   </button>
                 </div>
@@ -304,7 +320,9 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-3 col-12 d-flex justify-content-lg-center justify-content-start mb-5 mb-lg-0">
+            <div
+              class="col-lg-3 col-12 d-flex justify-content-lg-center justify-content-start mb-5 mb-lg-0"
+            >
               <ul class="nav flex-column">
                 <li class="nav-item mb-3">
                   <a class="nav-link text-white" href="#">Contact Us</a>
@@ -317,7 +335,9 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-3 col-12 d-flex justify-content-center justify-content-start">
+            <div
+              class="col-lg-3 col-12 d-flex justify-content-center justify-content-start"
+            >
               <span
                 class="icon-wrapper rounded-circle d-flex align-items-center justify-content-center"
               >
@@ -340,5 +360,7 @@
       <!-- end: footer -->
     </div>
     <!-- end: page wrapper -->
+
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

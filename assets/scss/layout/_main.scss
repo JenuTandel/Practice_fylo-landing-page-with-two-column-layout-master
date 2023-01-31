@@ -48,11 +48,15 @@
     }
 
     button {
-        padding: 12px 70px;
+        padding: 15px 70px;
         font-size: 14px;
         margin-left: 12px;
         white-space: nowrap;
         background-color: hsl(224, 93%, 58%);
+
+        &:hover{
+            background-color: #6b9bff;
+        }
 
         @media (max-width:768px) {
             width: 100%;
@@ -66,10 +70,8 @@
         }
     }
 
-    @include media-breakpoint-down(lg) {
-        input {
-            padding: 10px;
-        }
+    input {
+        padding: 12px;
     }
 
     input::placeholder {
@@ -295,6 +297,10 @@
         padding: 12px 36px;
         font-size: 14px;
         background-color: hsl(224, 93%, 58%);
+
+        &:hover{
+            background-color: #6b9bff;
+        }
 
         @media (max-width:576px) {
             width: 100%;

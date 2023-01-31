@@ -7129,11 +7129,14 @@ header .nav-link {
   }
 }
 .features button {
-  padding: 12px 70px;
+  padding: 15px 70px;
   font-size: 14px;
   margin-left: 12px;
   white-space: nowrap;
   background-color: hsl(224deg, 93%, 58%);
+}
+.features button:hover {
+  background-color: #6b9bff;
 }
 @media (max-width: 768px) {
   .features button {
@@ -7148,10 +7151,8 @@ header .nav-link {
     margin-left: 0px;
   }
 }
-@media (max-width: 991.98px) {
-  .features input {
-    padding: 10px;
-  }
+.features input {
+  padding: 12px;
 }
 .features input::placeholder {
   color: hsl(0deg, 0%, 75%);
@@ -7378,6 +7379,9 @@ header .nav-link {
   padding: 12px 36px;
   font-size: 14px;
   background-color: hsl(224deg, 93%, 58%);
+}
+.signin button:hover {
+  background-color: #6b9bff;
 }
 @media (max-width: 576px) {
   .signin button {
