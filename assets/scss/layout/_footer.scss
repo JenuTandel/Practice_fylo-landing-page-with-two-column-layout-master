@@ -1,0 +1,35 @@
+.contact-us {
+    padding-top:80px;
+    padding-bottom: 80px;
+
+    @media (max-width:576px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .icon-wrapper {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-left: 16px;
+
+        @media (max-width:576px) {
+            height: 30px;
+            width: 30px;
+        }
+    
+        .icon {
+            color: white;
+            font-size: 17px;
+
+            @media (max-width:576px) {
+                font-size: 12px;
+            }
+        }
+    }
+    
+    .icon-wrapper:first-child{
+        margin-left: 0;
+    }
+}

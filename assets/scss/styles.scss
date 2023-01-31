@@ -1,0 +1,17 @@
+//font-styles
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+//bootstrap icons
+@import url('../../node_modules/bootstrap-icons/font/bootstrap-icons.css');
+
+// base index file
+@import "base/index";
+
+//vendor index file
+@import "vendor/index";
+
+// utilities index file
+@import "utilities/index";
+
+// layout index file
+@import "layout/index";

@@ -1,0 +1,28 @@
+header{
+    nav {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    
+        @media (max-width:576px) {
+            padding-top: 30px;
+        }
+    }
+    
+    .nav-link {
+        padding-right: 0;
+        margin-left: 50px;
+        @media (max-width:576px) {
+            margin-left: 20px;
+            font-size: 12px;
+        }
+    
+    }
+    
+    @media (max-width:576px) {
+        .brand-logo{
+            img{
+                height: 30px;
+            }
+        }
+    }
+}
